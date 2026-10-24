@@ -8,18 +8,19 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* ===== HOME ===== */
 #container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;   
-    justify-content: center;   
+    align-items: flex-start;
+    justify-content: center;
     padding: 0 60px;
     color: white;
 
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('bmw.jpg');
+        url('/cars/bmw.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,16 +28,367 @@ body {
 }
 
 .appointment-btn {
+    display: block;
     background-color: #1c69d4;
     color: white;
     width: 200px;
     height: 50px;
-    border: none;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
 }
 
 .appointment-btn:hover {
+    background-color: #1553a8;
+}
+
+/* ===== FAQET E BRENDSHME ===== */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    color: white;
+}
+
+.page-content {
+    flex: 1;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+    height: 80px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+}
+
+.logo-img {
+    height: 45px;
+    display: block;
+}
+
+.topbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.topbar ul a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.topbar ul a:hover,
+.topbar ul a.active {
+    color: #1c69d4;
+    border-bottom: 2px solid #1c69d4;
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottombar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.bottombar p {
+    margin: 0;
+}
+
+/* ===== TITULLI I SEKSIONIT ===== */
+.section-title {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.section-title h2 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.section-title p {
+    margin: 0;
+    color: #aaa;
+}
+
+/* ===== KARTELAT E MAKINAVE ===== */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 30px 60px 50px;
+}
+
+.car-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(28, 105, 212, 0.3);
+}
+
+.car-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-card img[alt="BMW Series 4"] {
+    object-position: 75% 50%;
+}
+
+.car-body {
+    padding: 18px;
+}
+
+.car-body h3 {
+    margin: 0 0 6px;
+}
+
+.car-specs {
+    margin: 0 0 18px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.car-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1c69d4;
+}
+
+.price small {
+    font-size: 0.8rem;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.car-btn {
+    background-color: #1c69d4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.car-btn:hover {
+    background-color: #1553a8;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('bmw.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+}
+
+.banner-text p {
+    margin: 0;
+    color: #ccc;
+}
+
+/* ===== ABOUT ===== */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.about-text p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+.about-img {
+    flex: 1;
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 60%;
+    border-radius: 12px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 30px 60px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.stat h3 {
+    margin: 0 0 5px;
+    font-size: 2rem;
+    color: #1c69d4;
+}
+
+.stat p {
+    margin: 0;
+    color: #aaa;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 20px 60px 50px;
+}
+
+.feature {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    margin-top: 0;
+    color: #1c69d4;
+}
+
+.feature p {
+    margin: 0;
+    color: #bbb;
+}
+
+/* ===== CONTACT ===== */
+.contact-wrap {
+    display: flex;
+    gap: 40px;
+    padding: 50px 60px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #1c69d4;
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+
+.info-card h3 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    color: #1c69d4;
+}
+
+.info-card p {
+    margin: 0;
+    color: #ddd;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.contact-form h2 {
+    margin: 0 0 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1c69d4;
+}
+
+.form-btn {
+    background-color: #1c69d4;
+    color: white;
+    height: 48px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-btn:hover {
     background-color: #1553a8;
 }
